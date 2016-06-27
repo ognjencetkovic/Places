@@ -1,0 +1,24 @@
+{
+  "name": "mop-places",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ognjencetkovic/Places.git"
+  },
+  "author": "ognjencetkovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ognjencetkovic/Places/issues"
+  },
+  "homepage": "https://github.com/ognjencetkovic/Places#readme",
+  "dependencies": {
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "webpack": "^1.13.1"
+  }
+}
