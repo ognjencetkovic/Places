@@ -1,5 +1,6 @@
 import alt from '../alt';
 import AppActions from '../actions/AppActions';
+import fuzzy from 'fuzzy';
 
 var categories = [ { "id":1, "name":"Food", "active":true},
                             { "id":2, "name":"Clubs", "active":false},
@@ -18,7 +19,9 @@ class AppStore {
         this.bindActions(AppActions);
         this.categories =[];
         this.places =[];
+        this.filteredPlaces = [];
         this.activePlaces = [];
+        this.searchWord = "";
     }
 
     onGetFilters() {
@@ -34,6 +37,8 @@ class AppStore {
             }
         });
         this.activePlaces = tmp;
+        this.filteredPlaces = tmp;
+        console.log(this.filteredPlaces);
     }
 
     onGetPlaces() {
@@ -41,10 +46,18 @@ class AppStore {
         let tmp = [];
         this.places.forEach(function(place){
             if (place.category.active){
-                tmp.push(place);
+                return tmp.push(place);
             }
         });
         this.activePlaces = tmp;
+        this.filteredPlaces = tmp;
+    }
+
+    onUpdateSearchWord(searchWord) {
+        this.searchWord = searchWord;
+        var options = { extract: function(el) { return el.name; }};
+        var results = fuzzy.filter(this.searchWord, this.filteredPlaces, options);
+        this.activePlaces = results.map(function(el) { return el.original; });
     }
 
 }

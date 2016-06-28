@@ -2,7 +2,7 @@ import React from 'react';
 import AppActions from '../actions/AppActions.js';
 import AppStore from '../stores/AppStore.js';
 import GoogleMap from 'google-map-react';
-import PlaceMarker from './PlaceMarker.jsx'
+import PlaceMarker from './PlaceMarker.jsx';
 
 class InteractiveMap extends React.Component {
 

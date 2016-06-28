@@ -5,7 +5,8 @@ class AppActions {
         this.generateActions(
             'getPlaces',
             'toggleFilter',
-            'getFilters'
+            'getFilters',
+            'updateSearchWord'
         );
     }
 
