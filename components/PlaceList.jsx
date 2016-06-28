@@ -1,24 +1,29 @@
 import React from 'react';
 import Place from './Place.jsx';
-
-var places = [ { "id":1, "name":"Food1", "description":"test description", "image":"http://media.vector4free.com/normal/free-vector-bar-logo.jpg", "category":{ "id":1, "name":"Food"}, "location":{"lat": 43.850, "lng": 18.390}},
-                            { "id":2, "name":"Food2", "description":"test description", "image":"http://media.vector4free.com/normal/free-vector-bar-logo.jpg", "category":{ "id":1, "name":"Food"}, "location":{"lat": 43.850, "lng": 18.390}},
-                            { "id":3, "name":"Food3", "description":"test description", "image":"http://media.vector4free.com/normal/free-vector-bar-logo.jpg", "category":{ "id":1, "name":"Food"}, "location":{"lat": 43.850, "lng": 18.390}}];
+import AppActions from '../actions/AppActions.js';
+import AppStore from '../stores/AppStore.js';
 
 class PlaceList extends React.Component {
 
     constructor() {
           super();
-
-          this.state = {
-             data: places
-          }
+          this.state = AppStore.getState();
+          this.onChange = this.onChange.bind(this);
        }
+
+       componentDidMount() {
+           AppStore.listen(this.onChange);
+           AppActions.getPlaces();
+        }
+
+        onChange(state) {
+            this.setState(state);
+          }
 
    render() {
       return (
           <div className="row">
-              {this.state.data.map(place => <Place name={place.name} image={place.image} description={place.description}></Place>)}
+              {this.state.activePlaces.map(place => <Place key={place.id} name={place.name} image={place.image} description={place.description} cat={place.category.active ? "true" : "false"}></Place>)}
           </div>
       );
    }

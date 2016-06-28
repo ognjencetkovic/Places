@@ -11,6 +11,7 @@ class Place extends React.Component {
                   <div className="col-md-9">
                       <h3>{this.props.name}</h3>
                       <p>{this.props.description}</p>
+                      <p>{this.props.cat}</p>
                   </div>
               </div>
           </div>
