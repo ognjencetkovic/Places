@@ -23,7 +23,7 @@ class PlaceList extends React.Component {
    render() {
       return (
           <div className="row">
-              {this.state.activePlaces.map(place => <Place key={place.id} name={place.name} image={place.image} description={place.description} cat={place.category.active ? "true" : "false"}></Place>)}
+              {this.state.activePlaces.map(place => <Place key={place.id} name={place.name} image={place.image} description={place.description} />)}
           </div>
       );
    }

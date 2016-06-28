@@ -26,9 +26,13 @@ class Filters extends React.Component {
 
    render() {
       return (
-          <div className="btn-group" role="group">
-              {this.state.categories.map(category => <button key={category.id} type="button" className={category.active ? 'btn btn-primary' : 'btn btn-default'} onClick={this.setFilter.bind(null, category)}>{category.name}</button>)}
-         </div>
+          <div className="row">
+              <div className="col-md-12 filters-wrapper">
+                  <div className="btn-group" role="group">
+                      {this.state.categories.map(category => <button key={category.id} type="button" className={category.active ? 'btn btn-primary' : 'btn btn-default'} onClick={this.setFilter.bind(null, category)}>{category.name}</button>)}
+                 </div>
+              </div>
+          </div>
       );
    }
 }

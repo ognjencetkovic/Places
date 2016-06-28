@@ -1,8 +1,37 @@
-#map {
-    height: 800px;
-}
+.map {
+  height: calc(100vh - 90px); }
+
+.main-navbar {
+  background-color: #003251;
+  border-color: #2e6da4;
+  min-height: 50px;
+  margin-bottom: 20px; }
+
+.main-navbar .navbar-brand {
+  color: #D9DCD6; }
+
+.main-navbar .navbar-brand:hover {
+  color: #black; }
+
+.main-navbar .navbar-right {
+  padding-right: 8px; }
 
 .place-logo {
-    max-width:100%;
-    max-height:100%;
-}
+  max-width: 100%;
+  max-height: 100%; }
+
+.place-wrapper {
+  margin-top: 10px; }
+
+.place-wrapper .row .img-wrapper {
+  padding: 0px; }
+
+.filters-wrapper {
+  text-align: center; }
+
+.filters-wrapper div .btn {
+  width: 100px;
+  margin: 10px; }
+
+.filters-wrapper div .btn-primary {
+  background-color: #003251; }

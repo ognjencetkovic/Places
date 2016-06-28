@@ -4,7 +4,7 @@ import SearchBox from './SearchBox.jsx'
 class Navbar extends React.Component {
    render() {
       return (
-          <nav className="navbar navbar-default">
+          <nav className="navbar navbar-default  main-navbar">
             <div className="container-fluid">
               <div className="navbar-header">
                 <a className="navbar-brand" href="#">Places</a>

@@ -14,13 +14,15 @@ class App extends React.Component {
       return (
          <div>
             <Navbar />
-            <div className="row">
-                <div id="map" className="col-md-6">
-                    <InteractiveMap />
-                </div>
-                <div className="col-md-6">
-                    <Filters  />
-                    <PlaceList />
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-6 map">
+                        <InteractiveMap />
+                    </div>
+                    <div className="col-md-6">
+                        <Filters  />
+                        <PlaceList />
+                    </div>
                 </div>
             </div>
          </div>
