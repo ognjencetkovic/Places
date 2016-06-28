@@ -38,7 +38,6 @@ class AppStore {
         });
         this.activePlaces = tmp;
         this.filteredPlaces = tmp;
-        console.log(this.filteredPlaces);
     }
 
     onGetPlaces() {
