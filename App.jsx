@@ -4,10 +4,6 @@ import InteractiveMap from './components/InteractiveMap.jsx';
 import Filters from './components/Filters.jsx';
 import PlaceList from './components/PlaceList.jsx';
 
-var categories = [ { "id":1, "name":"Food", "active":true},
-                            { "id":2, "name":"Clubs", "active":false},
-                            { "id":3, "name":"Bars", "active":false}];
-
 class App extends React.Component {
 
     constructor() {
@@ -19,7 +15,7 @@ class App extends React.Component {
          <div>
             <Navbar />
             <div className="row">
-                <div className="col-md-6">
+                <div id="map" className="col-md-6">
                     <InteractiveMap />
                 </div>
                 <div className="col-md-6">
