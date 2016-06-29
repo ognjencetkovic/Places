@@ -3,6 +3,7 @@ import AppActions from '../actions/AppActions';
 import fuzzy from 'fuzzy';
 
 class AppStore {
+    
     constructor() {
         this.bindActions(AppActions);
         this.categories =[];

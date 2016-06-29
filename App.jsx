@@ -16,7 +16,7 @@ class App extends React.Component {
             <Navbar />
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-6 map">
+                    <div className="col-md-6 col-sm-12 map">
                         <InteractiveMap />
                     </div>
                     <div className="col-md-6">
